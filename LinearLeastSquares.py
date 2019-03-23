@@ -34,4 +34,4 @@ y_pred = [-1 if (x<=0) else 1 for x in y_pred]
 y_pred = np.array(y_pred).reshape(-1,1)
 y_test = np.array(y_test).reshape(-1,1)
 
-print(((y_pred != y_test).sum())/2000)
+print(((y_pred != y_test).sum()))
