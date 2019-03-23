@@ -13,6 +13,8 @@ def RandomizedTrainingDataGenerator(x_train_ip,y_train_ip,NumbSamples):
     #print(Samples)
     return np.array(itemgetter(*Samples)(x_train_ip)),np.array(itemgetter(*Samples)(y_train_ip))
 
+def PredictOutput(x_train_rand1,y_train_rand1):
+    return LinearRegression().fit(x_train_rand1, y_train_rand1)
 
 x_train = np.genfromtxt('../Gamma_train.txt',delimiter=',')
 x_train = np.array(x_train)
